@@ -1,17 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
+import picQr from './Images/image-qr-code.png';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+const App = () => {
+    return (
+        <div className='card'>
+            <img src={picQr} alt="QR Code " width="288" height="288" />
+            <h1>Improve your front-end skill by building projects</h1>
+            <p> Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+            </p>
+        </div>
+    )
+}
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />,)
